@@ -1,4 +1,3 @@
-G.l= {}
 class G.l.Block
 	constructor: (obj)->
 		@color=obj.color
