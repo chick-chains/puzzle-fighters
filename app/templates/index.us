@@ -1,0 +1,5 @@
+<canvas id="game_container" width=400 height=500>
+</canvas>
+<script>
+  new G.v.Layout()
+</script>

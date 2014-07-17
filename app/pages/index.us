@@ -5,12 +5,25 @@
 
     <link rel="stylesheet" type="text/css" href="<%= css %>" media="all" />
   </head>
-  <body>
-    <canvas id="game_container" width=400 height=500>
-    </canvas>
+  <body id="main">
+    
     <script type="text/javascript" src="<%= js %>"></script>
     <script type="text/javascript">
-      new G.v.Layout()
+      var app = Sammy('#main', function() {
+        // include a plugin
+
+        // define a 'route'
+        this.get('#/', function() {
+          // load some data
+          this.app.swap(JST['app/templates/index.us']());
+        });
+        this.get("#/board", function(){
+          this.app.swap(JST['app/templates/board.us']());
+        })
+      });
+
+      // start the application
+      app.run('#/');
     </script>
   </body>
 </html>

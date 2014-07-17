@@ -14,8 +14,10 @@ module.exports = function(lineman) {
     //
     js: {
       vendor: [
+        "vendor/bower/jquery/dist/jquery.js",
         "vendor/bower/lodash/dist/lodash.js",
-        "vendor/bower/easeljs/lib/easeljs-0.7.1.combined.js"
+        "vendor/bower/easeljs/lib/easeljs-0.7.1.combined.js",
+        "vendor/bower/sammy/lib/sammy.js"
       ]
     }
 
