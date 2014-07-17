@@ -9,9 +9,10 @@ describe 'G.l.Board', ->
       expect(@block.position).not.toBeUndefined()
       expect(@block.position).toEqual(@board._startingPosition)
   describe "should start have a width and height", ->
-    When( -> @board = new G.l.Board(
-              width: 2
-              height: 3))
+    When ->
+      @board = new G.l.Board
+        width: 2
+        height: 3
     Then ->
       expect(@board.getWidth()).toBe(2)
       expect(@board.getHeight()).toBe(3)

@@ -29,7 +29,7 @@ module.exports = function(lineman) {
     //     port: 3000
     //   }
     // }
-
+    livereload: true
     // Sass
     //
     // Lineman supports Sass via grunt-contrib-sass, which requires you first
