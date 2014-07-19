@@ -7,17 +7,17 @@ describe 'G.l.Board', ->
       @board.add @block
     Then ->
       expect(@block.position).not.toBeUndefined()
-      expect(@block.position).toEqual(@board._startingPosition)
+      expect(@block.position).toEqual(@board.startingPosition)
   describe "should start have a width and height", ->
     When ->
       @board = new G.l.Board
         width: 2
         height: 3
     Then ->
-      expect(@board.getWidth()).toBe(2)
-      expect(@board.getHeight()).toBe(3)
-      expect(@board.getWorldWidth()).toBe(100)
-      expect(@board.getWorldHeight()).toBe(150)
+      expect(@board.width).toBe(2)
+      expect(@board.height).toBe(3)
+      expect(@board.worldWidth).toBe(100)
+      expect(@board.worldHeight).toBe(150)
   context "position methods", ->
     Given ->
       @board =  new G.l.Board {width:2, height:3}

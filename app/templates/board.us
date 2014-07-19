@@ -1,1 +1,15 @@
-<h1> FFX</h1>
+<canvas id="game_container" width=360 height=710>
+</canvas>
+<script>
+  width= 7
+  height=10
+  real_width = $("#game_container").width(50*width).width()
+  real_height = $("#game_container").height(50*height).height()
+  stage = new createjs.Stage("game_container");
+  boards=G.f.Factory.create_board({ stage:stage, width:width,
+                                    height:height, real_width:real_width,
+                                    real_height:real_height});
+  stage.update()
+  boards.logic
+
+</script>
