@@ -20,6 +20,9 @@
         this.get("#/board", function(){
           this.app.swap(JST['app/templates/board.us']());
         })
+        this.get("#/block", function(){
+          this.app.swap(JST['app/templates/block.us']());
+        })
       });
        app.raise_errors = true;
       // start the application

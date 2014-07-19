@@ -18,7 +18,7 @@ class G.v.Board
     @draw_line(x*@_x_ratio,0,1, @board.height*@_y_ratio )
   draw_line:(x,y,width,height)->
     line = new createjs.Shape()
-    line.graphics.beginFill("#ff0000").drawRect(x,y,width,height)
+    line.graphics.beginFill("red").drawRect(x,y,width,height)
     line
 
   _calculate_ratio:(real_width,real_height)->

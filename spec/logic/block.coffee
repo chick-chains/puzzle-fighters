@@ -104,7 +104,7 @@ describe "Block Logic", ->
         @block = new G.l.Block
           color:"blue"
       When ->
-        @block.color = "red"
+        @block.paint("red")
       Then ->
         expect(@block.isPainted("blue")).toBe false
         expect(@block.isPainted("red")).toBe true

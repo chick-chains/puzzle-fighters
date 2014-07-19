@@ -1,0 +1,18 @@
+
+<script>
+  var stages=[]
+  _.each( ['red','green','blue','white','black'], function(e){
+    $("body").append($("<h1>").text(e)  )
+    var canvas = $("<canvas>").attr({width:50,height:50,id:e})
+    $("body").append(canvas)
+    block= G.f.Factory.create_block({color: e})
+    var stage = new createjs.Stage(e);
+    block.logic.position={x:0,y:0}
+    block.view.draw()
+    stage.addChild(block.view.shape)
+    stage.update()
+    stages.push(stage)
+
+  })
+
+</script>
